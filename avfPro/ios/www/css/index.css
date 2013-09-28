@@ -1,0 +1,5 @@
+.offline {
+	visibility: hidden;
+	color: #f00;
+	font-style: italic;
+}
