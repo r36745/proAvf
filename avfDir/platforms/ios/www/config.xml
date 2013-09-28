@@ -10,6 +10,12 @@
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
     </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
     <access origin="*" />
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="permissions" value="none" />

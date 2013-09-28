@@ -44,7 +44,6 @@ var screenOutput = function(bStats) {
            $("#data-msg").append(pic);
            });
 };
-alert("touch");
 
 $(function(){
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -73,3 +72,4 @@ function checkConnection() {
     
     alert('Connection type: ' + states[networkState]);
 }
+

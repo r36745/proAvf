@@ -14,6 +14,9 @@
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
     </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
     <access origin="*" />
     <access origin="http://127.0.0.1*" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
@@ -45,5 +48,11 @@
     <preference name="android-installLocation" value="auto" />
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
     </feature>
 </widget>
