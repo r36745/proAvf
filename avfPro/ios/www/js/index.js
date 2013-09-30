@@ -51,7 +51,7 @@ var screenOutput = function(bStats) {
 
 function onDeviceReady() {
     var myContact = navigator.contacts.create({"displayName": "Test User"});
-    myContact.note = "This contact has a note.";
+    myContact.note = "New contacts can be added.";
     console.log("The contact, " + myContact.displayName + ", note: " + myContact.note);
     $("#home").append(myContact.note);
 }
@@ -62,10 +62,10 @@ $(function(){
 
 
 var onDeviceReady = function() {
-    checkConnection();
+    netConnection();
 }
 
-var checkConnection = function() {
+var netConnection = function() {
     var networkState = navigator.connection.type;
     
     var states = {};
@@ -80,6 +80,14 @@ var checkConnection = function() {
     
     alert('Connection type: ' + states[networkState]);
 }
+
+var checkLanguage = function() {
+    navigator.globalization.getPreferredLanguage(
+ function (language) {alert('language: ' + language.value + '\n');},
+ function () {alert('Error getting language\n');}
+ );
+}
+
 
 
 
