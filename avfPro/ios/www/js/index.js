@@ -41,23 +41,35 @@ var screenOutput = function(bStats) {
            
            var pic = "<li><img src ='" + photo.images.standard_resolution.url + "' alt='" + photo.user.id + "'/><li>";
            console.log(pic);
-           $("#data-msg").append(pic);
+           $("#data-output").append(pic);
            });
 };
+
+
+  document.addEventListener("deviceready", onDeviceReady, false);
+
+
+function onDeviceReady() {
+    console.log('best');
+    var myContact = navigator.contacts.create({"displayName": "Test User"});
+    myContact.note = "This contact has a note.";
+    console.log("The contact, " + myContact.displayName + ", note: " + myContact.note);
+}
+
+
+
+
 
 $(function(){
     document.addEventListener("deviceready", onDeviceReady, false);
   });
 
 
-console.log("here");
-
 var onDeviceReady = function() {
-    console.log("justright");
     checkConnection();
 }
 
-function checkConnection() {
+var checkConnection = function() {
     var networkState = navigator.connection.type;
     
     var states = {};
@@ -72,4 +84,10 @@ function checkConnection() {
     
     alert('Connection type: ' + states[networkState]);
 }
+
+
+
+
+
+
 
