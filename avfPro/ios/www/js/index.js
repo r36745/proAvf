@@ -50,15 +50,11 @@ var screenOutput = function(bStats) {
 
 
 function onDeviceReady() {
-    console.log('best');
     var myContact = navigator.contacts.create({"displayName": "Test User"});
     myContact.note = "This contact has a note.";
     console.log("The contact, " + myContact.displayName + ", note: " + myContact.note);
+    $("#home").append(myContact.note);
 }
-
-
-
-
 
 $(function(){
     document.addEventListener("deviceready", onDeviceReady, false);
